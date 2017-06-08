@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flashstart.layoutstart.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bodyBg"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TableRow
+                android:id="@+id/row_ten_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_ten_up_year"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="@dimen/def_height"
+                    android:gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tv_ten_up_moon"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="@dimen/def_height"
+                    android:gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tv_ten_up_day"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="@dimen/def_height"
+                    android:gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tv_ten_up_hour"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="@dimen/def_height"
+                    android:gravity="bottom|center_horizontal"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btn_year_up"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="@dimen/def_height"
+                    android:background="@null"
+                    android:text="年干"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_moon_up"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="月干"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_day_up"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="日干"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_hour_up"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="时干"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_down"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btn_year_down"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="年支"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_moon_down"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="月支"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_day_down"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="日支"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btn_hour_down"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:text="时支"
+                    android:textAlignment="center"
+                    android:textColor="@color/dFont"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_ten_down"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_ten_down_year"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_year_left1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_year_right1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_year_left2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_year_right2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_year_left3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_year_right3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ten_down_moon"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_left1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_right1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_left2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_right2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_left3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_moon_right3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ten_down_day"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_day_left1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_day_right1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_day_left2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_day_right2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_day_left3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_day_right3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ten_down_hour"
+                    android:layout_width="@dimen/def_width"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_left1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_right1"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_left2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_right2"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_left3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/normal_font"/>
+
+                        <TextView
+                            android:id="@+id/tv_down_hour_right3"
+                            android:layout_width="@dimen/sub_width"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="重置"/>
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="计算"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
