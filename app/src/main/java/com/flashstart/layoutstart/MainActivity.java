@@ -11,6 +11,7 @@ import android.widget.GridView;
 import com.flashstart.layoutstart.startItem.Start8Item;
 import com.flashstart.layoutstart.startItem.startContents;
 import com.wx.wheelview.widget.WheelViewDialog;
+import com.flashstart.layoutstart.startItem.HandleData;
 
 import org.w3c.dom.Text;
 
@@ -91,9 +92,6 @@ public class MainActivity extends AppCompatActivity {
         }
         Start8Item sItem = new Start8Item(bUp, timeIndex,isDayMain);
 
-        // ******** 测试代码
-        //
-
         if (bUp)
         {
             sItem.setValue(startContents.g_sUp[timeIndex.getValue()]);
@@ -161,22 +159,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleTenStyle()
     {
-        // clearData();
-
         Button btnMainDay = _layout8Start.get(2);
 
         Start8Item sMainDay = (Start8Item)btnMainDay.getTag();
 
+        // 建立各种数据结构
+        //
+        HandleData.getInstance().buildData(sMainDay,_layout8Start);
+
+        // 更新十神显示UI
+        //
         for (int i=0; i<8; i++)
         {
             Button btnItem = _layout8Start.get(i);
 
             Start8Item sItem = (Start8Item) btnItem.getTag();
-
-            if (sItem.isDayMain == false)
-            {
-                sItem.handleTenStyle(sMainDay.getValue());
-            }
 
             if (sItem.isUp)
             {
@@ -188,6 +185,9 @@ public class MainActivity extends AppCompatActivity {
                 layoutUIDownTen(sItem);
             }
         }
+
+        // 更新天干地支合化UI
+        //
     }
 
     private void clearData()
