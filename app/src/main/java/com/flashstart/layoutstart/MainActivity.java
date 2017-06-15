@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
     private GridView    _gv;
 
+    private TextView    _tvMergeUp = null;
+    private TextView    _tvMergeDown = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         BuildTenLayout(R.id.tv_ten_up_moon);
         BuildTenLayout(R.id.tv_ten_up_day);
         BuildTenLayout(R.id.tv_ten_up_hour);
+
+        _tvMergeUp = (TextView) findViewById(R.id.tv_up_merge);
+        _tvMergeDown = (TextView) findViewById(R.id.tv_down_merge);
 
         for (int i=0; i<8; i++)
         {
@@ -188,6 +194,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 更新天干地支合化UI
         //
+        _tvMergeUp.setText(HandleData.getInstance().getUpList());
+        _tvMergeDown.setText(HandleData.getInstance().getDownList());
     }
 
     private void clearData()
