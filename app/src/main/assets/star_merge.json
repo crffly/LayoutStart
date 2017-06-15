@@ -1,0 +1,105 @@
+{
+  "root": [
+    {
+      "name": "土",
+      "list": [
+        {
+          "merge": "甲己",
+          "up": true
+        },
+        {
+          "merge": "子丑",
+          "up": false
+        },
+        {
+          "merge": "午未",
+          "up": false
+        }
+      ]
+    },
+    {
+      "name": "金",
+      "list": [
+        {
+          "merge": "乙庚",
+          "up": true
+        },
+        {
+          "merge": "辰酉",
+          "up": false
+        },
+        {
+          "merge": "巳酉丑",
+          "up": false
+        },
+        {
+          "merge": "申酉戌",
+          "up": false
+        }
+      ]
+    },
+    {
+      "name": "水",
+      "list": [
+        {
+          "merge": "丙辛",
+          "up": true
+        },
+        {
+          "merge": "巳申",
+          "up": false
+        },
+        {
+          "merge": "申子辰",
+          "up": false
+        },
+        {
+          "merge": "亥子丑",
+          "up": false
+        }
+      ]
+    },
+    {
+      "name": "木",
+      "list": [
+        {
+          "merge": "丁壬",
+          "up": true
+        },
+        {
+          "merge": "寅亥",
+          "up": false
+        },
+        {
+          "merge": "亥卯未",
+          "up": false
+        },
+        {
+          "merge": "寅卯辰",
+          "up": false
+        }
+      ]
+    },
+    {
+      "name": "火",
+      "list": [
+        {
+          "merge": "戊癸",
+          "up": true
+        },
+        {
+          "merge": "卯戌",
+          "up": false
+        },
+        {
+          "merge": "寅午戌",
+          "up": false
+        },
+        {
+          "merge": "巳午未",
+          "up": false
+        }
+      ]
+    }
+  ]
+}

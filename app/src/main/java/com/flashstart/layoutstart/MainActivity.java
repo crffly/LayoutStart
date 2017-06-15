@@ -11,6 +11,7 @@ import android.widget.GridView;
 import com.flashstart.layoutstart.startItem.Start8Item;
 import com.flashstart.layoutstart.startItem.startContents;
 import com.wx.wheelview.widget.WheelViewDialog;
+import com.flashstart.layoutstart.startItem.HandleData;
 
 import org.w3c.dom.Text;
 
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<TextView>  _layoutTenStyle = new ArrayList<TextView>();
 
     private GridView    _gv;
+
+    private TextView    _tvMergeUp = null;
+    private TextView    _tvMergeDown = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         BuildTenLayout(R.id.tv_ten_up_moon);
         BuildTenLayout(R.id.tv_ten_up_day);
         BuildTenLayout(R.id.tv_ten_up_hour);
+
+        _tvMergeUp = (TextView) findViewById(R.id.tv_up_merge);
+        _tvMergeDown = (TextView) findViewById(R.id.tv_down_merge);
 
         for (int i=0; i<8; i++)
         {
@@ -90,9 +97,6 @@ public class MainActivity extends AppCompatActivity {
             isDayMain = true;
         }
         Start8Item sItem = new Start8Item(bUp, timeIndex,isDayMain);
-
-        // ******** 测试代码
-        //
 
         if (bUp)
         {
@@ -161,22 +165,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleTenStyle()
     {
-        // clearData();
-
         Button btnMainDay = _layout8Start.get(2);
 
         Start8Item sMainDay = (Start8Item)btnMainDay.getTag();
 
+        // 建立各种数据结构
+        //
+        HandleData.getInstance().buildData(sMainDay,_layout8Start);
+
+        // 更新十神显示UI
+        //
         for (int i=0; i<8; i++)
         {
             Button btnItem = _layout8Start.get(i);
 
             Start8Item sItem = (Start8Item) btnItem.getTag();
-
-            if (sItem.isDayMain == false)
-            {
-                sItem.handleTenStyle(sMainDay.getValue());
-            }
 
             if (sItem.isUp)
             {
@@ -188,6 +191,11 @@ public class MainActivity extends AppCompatActivity {
                 layoutUIDownTen(sItem);
             }
         }
+
+        // 更新天干地支合化UI
+        //
+        _tvMergeUp.setText(HandleData.getInstance().getUpList());
+        _tvMergeDown.setText(HandleData.getInstance().getDownList());
     }
 
     private void clearData()

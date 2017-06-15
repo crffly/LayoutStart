@@ -27,6 +27,7 @@ public class TenStyleData {
 
     private JSONArray  _rootTen = null;
     private JSONArray  _rootDown2Up = null;
+    private JSONArray  _rootMerge = null;
 
     private static TenStyleData instance = null;
 
@@ -58,6 +59,15 @@ public class TenStyleData {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        urls = UrlsTools.geFileFromAssets(StartApplication.getInstance().getApplicationContext(), "star_merge.json");
+        try {
+            JSONObject downData = new JSONObject(urls);
+            _rootMerge = downData.getJSONArray("root");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public JSONArray getTenData()
@@ -69,5 +79,8 @@ public class TenStyleData {
     {
         return _rootDown2Up;
     }
-
+    public JSONArray getMergeData()
+    {
+        return _rootMerge;
+    }
 }
