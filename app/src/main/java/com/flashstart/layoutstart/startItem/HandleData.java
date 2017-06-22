@@ -92,6 +92,11 @@ public class HandleData {
             Start8Item sItemCur = (Start8Item) btnItemCur.getTag();
             Start8Item sItemPre = (Start8Item) btnItemPre.getTag();
 
+            if (sItemCur.getValue().compareTo(sItemPre.getValue()) == 0)
+            {
+                continue;
+            }
+
             String strLeft =  sItemPre.getValue() + sItemCur.getValue();
 
             String strResult = findUp(strLeft);
@@ -113,6 +118,11 @@ public class HandleData {
             Start8Item sItemCur = (Start8Item) btnItemCur.getTag();
             Start8Item sItemPre = (Start8Item) btnItemPre.getTag();
 
+            if (sItemCur.getValue().compareTo(sItemPre.getValue()) == 0)
+            {
+                continue;
+            }
+
             String strLeft =  sItemPre.getValue() + sItemCur.getValue();
 
             String strResult = findUp(strLeft);
@@ -132,6 +142,12 @@ public class HandleData {
             Start8Item sItemCur = (Start8Item) btnItemCur.getTag();
             Start8Item sItemPre = (Start8Item) btnItemPre.getTag();
             Start8Item sItemFrist = (Start8Item) btnItemFrist.getTag();
+
+            if (sItemCur.getValue().compareTo(sItemPre.getValue()) == 0 ||
+                    sItemCur.getValue().compareTo(sItemFrist.getValue()) == 0)
+            {
+                continue;
+            }
 
             String strLeft =  sItemFrist.getValue() + sItemPre.getValue() + sItemCur.getValue();
 
@@ -170,7 +186,6 @@ public class HandleData {
                         for (int k = 0; k < strValue.length(); k++) {
                             String strSub = strValue.substring(k, k + 1);
 
-                            int nRel = strItem.indexOf(strSub);
                             if (strItem.indexOf(strSub) == -1) {
                                 bRel = false;
                                 break;
